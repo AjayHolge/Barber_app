@@ -43,8 +43,8 @@ class _BookingState extends State<Booking> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF2b1615),
-      body: Container(
-        margin: EdgeInsets.only(left: 10.0),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(horizontal: 10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -104,9 +104,7 @@ class _BookingState extends State<Booking> {
                   ),
                   SizedBox(height: 10.0),
                   GestureDetector(
-                    onTap: () {
-                      _selectDate(context);
-                    },
+                    onTap: () => _selectDate(context),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -130,7 +128,6 @@ class _BookingState extends State<Booking> {
                 ],
               ),
             ),
-
             SizedBox(height: 20.0),
             Container(
               padding: EdgeInsets.symmetric(vertical: 10.0),
@@ -151,9 +148,7 @@ class _BookingState extends State<Booking> {
                   ),
                   SizedBox(height: 10.0),
                   GestureDetector(
-                    onTap: () {
-                      _selectTime(context);
-                    },
+                    onTap: () => _selectTime(context),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -177,6 +172,32 @@ class _BookingState extends State<Booking> {
                 ],
               ),
             ),
+            SizedBox(height: 40.0),
+            GestureDetector(
+              onTap: () {},
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10.0,
+                  vertical: 15.0,
+                ),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFfe8f33),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Center(
+                  child: Text(
+                    "Book Now",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 30.0),
           ],
         ),
       ),

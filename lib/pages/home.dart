@@ -25,7 +25,7 @@ class _HomeState extends State<Home> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Hellow,",
+                      "Hello,",
                       style: TextStyle(
                         color: const Color.fromARGB(212, 255, 255, 255),
                         fontSize: 24.0,

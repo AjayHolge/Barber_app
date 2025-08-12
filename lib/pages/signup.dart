@@ -117,12 +117,20 @@ class _SignupState extends State<Signup> {
                       borderRadius: BorderRadius.circular(30),
                     ),
                     child: Center(
-                      child: Text(
-                        "SIGN UP",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24.0,
-                          fontWeight: FontWeight.bold,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Login()),
+                          );
+                        },
+                        child: Text(
+                          "SIGN UP",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24.0,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ),

@@ -12,32 +12,32 @@ class _OnboardingState extends State<Onboarding> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF2b1615),
+      backgroundColor: Color(0xFF2b1615),
       body: Container(
-        margin: const EdgeInsets.only(top: 120.0),
+        margin: EdgeInsets.only(top: 120.0),
         child: Column(
           children: [
             GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Home()),
+                  MaterialPageRoute(builder: (context) => Home()),
                 );
               },
               child: Column(
                 children: [
                   Image.asset('assets/images/barber.png'),
-                  const SizedBox(height: 50.0),
+                  SizedBox(height: 50.0),
                   Container(
-                    padding: const EdgeInsets.symmetric(
+                    padding: EdgeInsets.symmetric(
                       horizontal: 20.0,
                       vertical: 20.0,
                     ),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFdf711a),
+                      color: Color(0xFFdf711a),
                       borderRadius: BorderRadius.circular(30),
                     ),
-                    child: const Text(
+                    child: Text(
                       "Get a stylish Haircut",
                       style: TextStyle(
                         color: Colors.white,
